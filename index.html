@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>איילת ועמית ומתחתנים</title>
+
+    <meta name="description" content="אנחנו מתחנתים ורוצים להזמין אותכם לשמוח איתנו!" />
+    <meta property="og:title" content="אנחנו מתחנתים" />
+    <meta property="og:image" content="./fingers.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+    <!-- Add to calendar -->
+    <!-- <script src="add-to-calendar.js"></script> -->
+</head>
+
+<body>
+    <h1>החתונה של איילת ועמית
+    </h1>
+    <div class="scene">
+        <div class="card">
+            <div class="card__face card__face--front">
+                <img src="./front.jpg">
+
+            </div>
+            <div class="card__face card__face--back">
+                <img src="./back.jpg">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="switch-button">
+        <input class="switch-button-checkbox" type="checkbox"></input>
+        <label class="switch-button-label" for=""><span class="switch-button-label-span">אחור</span></label>
+    </div>
+    <div class="btns">
+        <a href="https://waze.com/ul/hsv8z1v0nb" class="btn waze" target="_blank" rel="noreferrer">
+            <img src="./waze.png" alt="Avatar" style="width:3rem;height:auto;">
+        </a>
+        <a href="https://add.eventable.com/events/62c1c4c5baf3360736a2e2bc/62c1c4c644a71507377ffc7d" id="calendar"
+            class="btn calendar" target="_blank" rel="noreferrer">הוספה ליומן</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.switch-button').addEventListener('click', function () {
+                document.querySelector('.card').classList.toggle('hover')
+            });
+        });
+    </script>
+
+</html>
