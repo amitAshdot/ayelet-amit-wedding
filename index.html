@@ -6,31 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>איילת ועמית ומתחתנים</title>
-
     <meta name="description" content="אנחנו מתחתנים ורוצים להזמין אותכם לשמוח איתנו!" />
     <meta property="og:title" content="הזמנה לחתונה של איילת ועמית" />
     <meta property="og:image" content="./fingers.png" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-
-
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-
-    <!-- Add to calendar -->
-    <!-- <script src="add-to-calendar.js"></script> -->
 </head>
 
 <body>
-    <h1>החתונה של איילת ועמית
-    </h1>
+    <h1>החתונה של איילת ועמית</h1>
     <div class="scene">
         <div class="card">
             <div class="card__face card__face--front">
                 <img src="./front.jpg">
-
             </div>
             <div class="card__face card__face--back">
                 <img src="./back.jpg">
-
             </div>
         </div>
     </div>
@@ -47,11 +38,53 @@
             class="btn calendar" target="_blank" rel="noreferrer">הוספה ליומן</a>
     </div>
 
+    <form method="post" action="https://sheetdb.io/api/v1/mlekeixihh85a">
+        ID: <input name="data[id]">
+        Name: <input name="data[name]">
+        Age: <input name="data[age]">
+        <button type="submit">Submit</button>
+    </form>
+    <!-- <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                // you can put any JS code here
+                alert('success')
+            });
+        });
+    </script> -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+
+    <script src="//sheetdb.io/api/js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.switch-button').addEventListener('click', function () {
                 document.querySelector('.card').classList.toggle('hover')
             });
+
+            let url = 'https://sheetdb.io/api/v1/mlekeixihh85a';
+            let object = {
+                sheet: 'test',
+                data: { player: 'Test', score: 41 }
+            }
+
+
+            axios.post(url, { object }).then(response => {
+                console.log(response.data);
+            });
+            // SheetDB.write(url, object).then(function (result) {
+            //     console.log(result);
+            // }, function (error) {
+            //     console.log(error);
+            // });
         });
     </script>
 
