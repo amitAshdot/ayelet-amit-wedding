@@ -38,31 +38,8 @@
             class="btn calendar" target="_blank" rel="noreferrer">הוספה ליומן</a>
     </div>
 
-    <form class="form" name="form" method="post" action="https://sheetdb.io/api/v1/mlekeixihh85a">
-        <!-- ID: <input name="data[id]"> -->
-        שם: <input name="data[name]">
-        מספר מגיעים: <input name="data[count]">
-        <button type="submit">Submit</button>
-    </form>
-    <!-- <script>
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(document.getElementById("sheetdb-form")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                // you can put any JS code here
-                alert('success')
-            });
-        });
-    </script> -->
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-
-    <script src="//sheetdb.io/api/js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script> -->
+    <!-- <script src="//sheetdb.io/api/js"></script> -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -70,22 +47,22 @@
                 document.querySelector('.card').classList.toggle('hover')
             });
 
-            document.querySelector('form').addEventListener('submit', function () {
-                let name = document.querySelector('input[name="data[name]"]').value;
-                let count = document.querySelector('input[name="data[count]"]').value;
+            // document.querySelector('form').addEventListener('submit', function () {
+            //     let name = document.querySelector('input[name="data[name]"]').value;
+            //     let count = document.querySelector('input[name="data[count]"]').value;
 
-                let object = {
-                    sheet: 'test',
-                    data: { name: name, count: count }
-                }
-                let baseUrl = 'https://sheetdb.io/api/v1/mlekeixihh85a';
+            //     let object = {
+            //         sheet: 'test',
+            //         data: { name: name, count: count }
+            //     }
+            //     let baseUrl = 'https://sheetdb.io/api/v1/mlekeixihh85a';
 
-                axios.post(`${baseUrl}/import/json`, {
-                    "json": `${data}`
-                }).then(response => {
-                    console.log(response.data);
-                });
-            });
+            //     axios.post(`${baseUrl}/import/json`, {
+            //         "json": `${data}`
+            //     }).then(response => {
+            //         console.log(response.data);
+            //     });
+            // });
         });
     </script>
 
